@@ -1,0 +1,40 @@
+{
+  "typescript react function components": {
+    "prefix": "tsrfc",
+    "body": [
+      "import React from 'react';",
+      "interface $1Props {",
+      "}",
+      "const $1: React.FC<$1Props> = _props => {",
+      "  return <div></div>;",
+      "};",
+      "export default $1;"
+    ]
+  },
+  "dva connected typescript react function page": {
+    "prefix": "dctsrfp",
+    "body": [
+      "import React from 'react';",
+      "import { GlobalStore } from '@/common/types';",
+      "import { connect } from 'dva';",
+      "",
+      "const mapStateToProps = (s: GlobalStore) => {",
+      "  return {",
+      "    s,",
+      "  };",
+      "};",
+      "type PageStateProps = ReturnType<typeof mapStateToProps>;",
+      "",
+      "interface BaseProps {}",
+      "",
+      "type PageProps = BaseProps & PageStateProps;",
+      "",
+      "const Base: React.FC<PageProps> = _props => {",
+      "  return <div></div>;",
+      "};",
+      "",
+      "export default connect(mapStateToProps)(Base as React.FC<PageProps>);",
+      ""
+    ]
+  }
+}

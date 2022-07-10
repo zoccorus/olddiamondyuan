@@ -1,0 +1,141 @@
+{
+	"name": "diamondyuan-vscode-snippets",
+	"displayName": "DiamondYuan VS code Snippet",
+	"version": "0.0.13",
+	"publisher": "DiamondYuan",
+	"repository": "git@github.com:DiamondYuan/vscode-snippets.git",
+	"author": "DiamondYuan <admin@diamondyuan.com>",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"scripts": {
+		"test": "egg-bin test",
+		"fix": "ts-node src/fix.ts",
+		"lint": "eslint --ext .js,.ts .",
+		"travis-publish": "vsce publish -p $VS_TOKEN"
+	},
+	"pre-commit": [
+		"lint",
+		"test"
+	],
+	"egg": {
+		"typescript": true
+	},
+	"devDependencies": {
+		"@diamondyuan/eslint-config-typescript": "^6.0.0",
+		"@types/globby": "^9.1.0",
+		"@types/mocha": "^5.2.6",
+		"@types/power-assert": "^1.5.0",
+		"@typescript-eslint/eslint-plugin": "^1.7.0",
+		"@typescript-eslint/parser": "^1.7.0",
+		"babel-eslint": "^10.0.1",
+		"egg-bin": "^4.13.0",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.2.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"globby": "^9.2.0",
+		"pre-commit": "^1.2.2",
+		"prettier": "^1.17.0",
+		"ts-node": "^8.1.0",
+		"typescript": "^3.4.5",
+		"vsce": "^1.61.0"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "markdown",
+				"path": "./snippets/markdown/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/dva.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/import_and_export.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/test.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/dva.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/import_and_export.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/test.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript/dva.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript/import_and_export.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript/test.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/javascript/dva.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/javascript/import_and_export.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/javascript/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/javascript/test.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescriptreact/react.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/scss/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "ffa441ab-b2fa-4519-a407-cf84cb3e13b3",
+		"publisherId": "3a928220-6ba1-410c-a74b-5652c684eb50",
+		"publisherDisplayName": "DiamondYuan",
+		"installedTimestamp": 1618377787298
+	}
+}

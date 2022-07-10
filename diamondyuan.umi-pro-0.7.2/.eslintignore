@@ -1,0 +1,4 @@
+node_modules/
+coverage/
+out/
+src/test/fixtures/ant-design-pro-master

@@ -1,0 +1,150 @@
+{
+	"name": "umi-pro",
+	"displayName": "Umi Pro",
+	"icon": "images/umi.png",
+	"description": "Write Umi like a Pro! ",
+	"version": "0.7.2",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"publisher": "DiamondYuan",
+	"repository": "https://github.com/umijs/vscode-extension-umi-pro",
+	"activationEvents": [
+		"workspaceContains:package.json"
+	],
+	"categories": [
+		"Other"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"commit": "git-cz",
+		"package": "vsce package",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"lint": "eslint --ext .js,.ts .",
+		"travis-publish": "vsce publish -p $VS_TOKEN",
+		"test": "yarn run compile && CODE_TESTS_WORKSPACE=src/test/fixtures/testWorkspace.code-workspace node ./node_modules/vscode/bin/test"
+	},
+	"pre-commit": [
+		"lint"
+	],
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-conventional-changelog"
+		}
+	},
+	"contributes": {
+		"colors": [
+			{
+				"id": "umipro.annotationColor",
+				"description": "text color of line annotations",
+				"defaults": {
+					"dark": "#99999950",
+					"light": "#999999A6",
+					"highContrast": "#99999999"
+				}
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Umi Pro configuration",
+			"properties": {
+				"umi_pro.quotes": {
+					"scope": "resource",
+					"type": "string",
+					"default": "single",
+					"description": "type of quotes",
+					"enum": [
+						"double",
+						"single",
+						"backtick"
+					]
+				},
+				"umi_pro.router_config_path": {
+					"scope": "resource",
+					"type": "string",
+					"description": "path of router config"
+				},
+				"umi_pro.autoGenerateSagaEffectsCommands": {
+					"scope": "resource",
+					"type": "boolean",
+					"description": "autoGenerateSagaEffectsCommands"
+				},
+				"umi_pro.saveOnGenerateEffectsCommandTimeout": {
+					"scope": "resource",
+					"type": "number",
+					"description": "saveOnGenerateEffectsCommandTimeout"
+				},
+				"umi_pro.router_exclude_path": {
+					"scope": "resource",
+					"type": "array",
+					"default": [],
+					"description": "path exclude in router completion"
+				},
+				"umi_pro.parser_options": {
+					"scope": "resource",
+					"type": "object",
+					"description": "babel parser options"
+				},
+				"umi_pro.locale": {
+					"scope": "resource",
+					"type": "string",
+					"default": "zh-CN",
+					"description": "which language file to be watched for providing completion items and go-to definition"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@diamondyuan/eslint-config-typescript": "^6.0.0",
+		"@types/babel-generator": "^6.25.3",
+		"@types/babel-traverse": "^6.25.5",
+		"@types/babel-types": "^7.0.7",
+		"@types/lodash": "^4.14.132",
+		"@types/mocha": "^5.2.6",
+		"@types/mz": "^0.0.32",
+		"@types/node": "^10.12.21",
+		"@types/power-assert": "^1.5.0",
+		"@types/sinon": "^7.0.11",
+		"@typescript-eslint/eslint-plugin": "^1.9.0",
+		"@typescript-eslint/parser": "^1.10.2",
+		"babel-eslint": "^10.0.1",
+		"commitizen": "^3.1.1",
+		"conventional-changelog-cli": "^2.0.21",
+		"decache": "^4.5.1",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.3.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"glob": "^7.1.3",
+		"istanbul": "^0.4.5",
+		"mocha": "^6.1.4",
+		"pre-commit": "^1.2.2",
+		"prettier": "^1.17.1",
+		"remap-istanbul": "^0.13.0",
+		"sinon": "^7.3.2",
+		"typescript": "^3.4.5",
+		"vsce": "^1.66.0",
+		"vscode": "^1.1.36"
+	},
+	"dependencies": {
+		"@babel/generator": "^7.4.4",
+		"@babel/parser": "^7.4.5",
+		"@babel/traverse": "^7.4.5",
+		"@babel/types": "^7.4.4",
+		"codecov": "^3.5.0",
+		"globby": "^9.2.0",
+		"lodash": "^4.17.11",
+		"mz": "^2.7.0",
+		"reflect-metadata": "^0.1.13",
+		"typedi": "^0.8.0"
+	},
+	"__metadata": {
+		"id": "2c831e1b-f85a-4c39-aa31-de1261733827",
+		"publisherId": "3a928220-6ba1-410c-a74b-5652c684eb50",
+		"publisherDisplayName": "DiamondYuan",
+		"installedTimestamp": 1618378430707
+	}
+}
