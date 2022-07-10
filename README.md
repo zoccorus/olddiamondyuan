@@ -1,5 +1,4 @@
-# olddiamondyuan2021
-this is diamond yuan outdated version
+this is diamond yuan umi pro outdated version
 
 3 folders are
 - diamondyuan.diamondyuan-vscode-snippets-0.0.13
